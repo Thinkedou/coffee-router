@@ -17,10 +17,10 @@
                </a>
              </li>
              <li class="nav-item px-lg-4">
-               <a class="nav-link text-uppercase text-expanded" href="about.html">About</a>
+                 <router-link class="nav-link text-uppercase text-expanded" to="about">About</router-link>
              </li>
              <li class="nav-item px-lg-4">
-               <a class="nav-link text-uppercase text-expanded" href="products.html">Products</a>
+               <router-link class="nav-link text-uppercase text-expanded" to="products">Products</router-link>
              </li>
              <li class="nav-item px-lg-4">
                <a class="nav-link text-uppercase text-expanded" href="store.html">Store</a>
@@ -29,6 +29,7 @@
          </div>
        </div>
      </nav>
+     <router-view ></router-view>
 
      <section class="page-section clearfix">
        <div class="container">
