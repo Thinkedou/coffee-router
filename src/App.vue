@@ -1,6 +1,9 @@
 <template>
   <div id="app">
-     <CoffeeHeaderNav />
+      <h1 class="site-heading text-center text-white d-none d-lg-block">
+    <span class="site-heading-upper text-primary mb-3">Un Theme bootstrap pas du tout volé  (◔◡◔✿)</span>
+    <span class="site-heading-lower">Business Casual</span>
+  </h1>
 
      <!-- Navigation -->
      <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
@@ -29,7 +32,6 @@
          </div>
        </div>
      </nav>
-     <router-view ></router-view>
 
      <section class="page-section clearfix">
        <div class="container">
@@ -77,14 +79,11 @@
 </template>
 
 <script>
- import CoffeeHeaderNav       from "@/components/CoffeeHeaderNav.vue";
-
 
 export default {
   name: 'App',
   props: {  },
   components:{
-      CoffeeHeaderNav
   }
 }
 </script>
