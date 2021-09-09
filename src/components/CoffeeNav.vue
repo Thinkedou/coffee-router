@@ -13,16 +13,16 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
               <ul class="navbar-nav mx-auto">
                 <li class="nav-item active px-lg-4">
-                  <router-link class="nav-link text-uppercase text-expanded" to="/">Home</router-link>
+                  <router-link class="nav-link text-uppercase text-expanded" to="Home">Home</router-link>
                 </li>
                 <li class="nav-item px-lg-4">
-                    <router-link class="nav-link text-uppercase text-expanded" to="about">About</router-link>
+                    <router-link class="nav-link text-uppercase text-expanded" to="About">About</router-link>
                 </li>
                 <li class="nav-item px-lg-4">
-                  <router-link class="nav-link text-uppercase text-expanded" to="products">Products</router-link>
+                  <router-link class="nav-link text-uppercase text-expanded" to="Products">Products</router-link>
                 </li>
                 <li class="nav-item px-lg-4">
-                  <router-link class="nav-link text-uppercase text-expanded" to="store">Store</router-link>
+                  <router-link class="nav-link text-uppercase text-expanded" to="Store">Store</router-link>
                 </li>
               </ul>
             </div>

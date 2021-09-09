@@ -13,8 +13,8 @@
 </template>
 
 <script>
-import CoffeeNav    from './components/CoffeeNav'
-import CoffeeFooter from './components/CoffeeFooter'
+import CoffeeNav    from '@/components/CoffeeNav'
+import CoffeeFooter from '@/components/CoffeeFooter'
 
 export default {
   name: 'App',
