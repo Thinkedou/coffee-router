@@ -6,23 +6,19 @@
         </h1>
         <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
           <div class="container">
-            <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#">Coffee Router</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
               <ul class="navbar-nav mx-auto">
                 <li class="nav-item active px-lg-4">
-                  <router-link class="nav-link text-uppercase text-expanded" to="Home">Home</router-link>
+                  <router-link class="nav-link text-uppercase text-expanded" :to="{ name: 'Home' }">Home</router-link>
                 </li>
                 <li class="nav-item px-lg-4">
-                    <router-link class="nav-link text-uppercase text-expanded" to="About">About</router-link>
+                    <router-link class="nav-link text-uppercase text-expanded router-link-exact-path-active" :to="{ name: 'About' }">About</router-link>
                 </li>
                 <li class="nav-item px-lg-4">
-                  <router-link class="nav-link text-uppercase text-expanded" to="Products">Products</router-link>
+                  <router-link class="nav-link text-uppercase text-expanded" :to="{ name: 'Products' }">Products</router-link>
                 </li>
                 <li class="nav-item px-lg-4">
-                  <router-link class="nav-link text-uppercase text-expanded" to="Store">Store</router-link>
+                  <router-link class="nav-link text-uppercase text-expanded" :to="{ name: 'Store' }">Store</router-link>
                 </li>
               </ul>
             </div>
@@ -36,3 +32,10 @@ export default {
   name: 'CoffeeNav'
 }
 </script>
+<style scoped>
+
+     li a .router-link-exact-path-active {
+        color: #e6a756;
+    }
+
+</style>
