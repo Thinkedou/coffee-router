@@ -16,12 +16,12 @@
                     </tr>
                 </thead>
                 <tbody>
-                  <tr  >
-                        <th scope="row">id</th>
-                        <td>marque</td>
+                  <tr v-for="coffee in localCoffee" :key='coffee.id'>
+                        <td scope="row">{{coffee.id}}</td>
+                        <td>{{coffee.marque}}</td>
                         <td>titre</td>
                         <td>prix</td>
-                        <td><button type="button" class="btn btn-secondary btn-sm">voir</button></td>
+                        <td><button @click="goToProductDetails(coffee.id)" type="button" class="btn btn-secondary btn-sm">voir</button></td>
                   </tr>
                 </tbody>
                 </table>
@@ -40,12 +40,12 @@ import {coffee} from '@/assets/js/Coffee'
 export default {
   name: 'CoffeeProducts',
   data:()=>({
+      localCoffee:coffee
   }),
-  filters:{
-
-  },
   methods:{
-
+      goToProductDetails(productId){
+          this.$router.push({name:'productsDetails',params:{productId}})
+      }
   }
 }
 </script>

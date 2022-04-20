@@ -6,12 +6,12 @@
             <div class="row">
                 <div class="col-6">
                     <div class="jumbotron jumbotron-fluid">
-                        <img :src="coffeurl" style="height:250px" alt="">
+                        <img :src="currentCoffee.images[0]" style="height:250px" alt="">
                     </div>
                 </div>
                 <div class="col-6">
                     <div class="jumbotron jumbotron-fluid">
-                        <h5>Titre</h5>
+                        <h5>{{currentCoffee.titre}}</h5>
                         <ul class="list-group">
                             <li class="list-group-item">marque</li>
                             <li class="list-group-item">prix €</li>
@@ -37,13 +37,16 @@ import {coffee} from '@/assets/js/Coffee'
 export default {
   name: 'CoffeeProductsDetails',
   data:()=>({
-
+      allCoffee:coffee,
+      currentCoffee:{}
   }),
   methods:{
 
   },
   created(){
-
+      const { productId } = this.$route.params;
+      this.currentCoffee  = coffee.find((cof)=>cof.id==productId)
+      console.log(productId)
   }
 }
 </script>
