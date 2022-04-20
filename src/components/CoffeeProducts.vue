@@ -16,12 +16,12 @@
                     </tr>
                 </thead>
                 <tbody>
-                  <tr v-for='(coffee,idx) in localCoffee' :key='coffee.id' >
-                        <th scope="row">{{idx}}</th>
-                        <td>{{coffee.marque}}</td>
-                        <td>{{coffee.titre}}</td>
-                        <td>{{coffee.prix | priceFormat}} </td>
-                        <td><button @click='openCoffeeDetails(coffee.id)' type="button" class="btn btn-secondary btn-sm">voir</button></td>
+                  <tr  >
+                        <th scope="row">id</th>
+                        <td>marque</td>
+                        <td>titre</td>
+                        <td>prix</td>
+                        <td><button type="button" class="btn btn-secondary btn-sm">voir</button></td>
                   </tr>
                 </tbody>
                 </table>
@@ -40,21 +40,12 @@ import {coffee} from '@/assets/js/Coffee'
 export default {
   name: 'CoffeeProducts',
   data:()=>({
-      localCoffee:coffee
   }),
   filters:{
-      priceFormat(entry){
-          return entry+' €';
-      }
+
   },
   methods:{
-      openCoffeeDetails(coffeeId){
-          this.$router.push({
-              name:'ProductsDetails',
-              params:{coffeeId:coffeeId}
-          });
-          // console.log(`On va ouvrir le café ${coffeeId} ☕`)
-      }
+
   }
 }
 </script>
